@@ -18,7 +18,7 @@ edges = cv2.Canny(gray, 80, 150)
 # rho = 1 pixel resolution
 # theta = 1 degree resolution (π/180 radians)
 # threshold = minimum number of votes needed to consider something a line
-lines = cv2.HoughLines(edges, rho=1, theta=np.pi/180, threshold=260)
+lines = cv2.HoughLines(edges, rho=1, theta=np.pi/180, threshold=230)
 
 # 5) Draw the detected lines on a copy of the original image
 result = img.copy()
@@ -54,4 +54,5 @@ cv2.destroyAllWindows()
 
 # 7) Save the results
 # Save the result image to a file
+cv2.imwrite("engine_edges.png", edges)
 cv2.imwrite("engine_lines_overlay.png", result)
