@@ -11,8 +11,8 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 gray = cv2.GaussianBlur(gray, (5, 5), 1)
 
 # 3) Edge detection (Canny)
-# The thresholds (80,150) may need tuning depending on the lighting and contrast
-edges = cv2.Canny(gray, 80, 150)
+# The thresholds (150,220) may need tuning depending on the lighting and contrast
+edges = cv2.Canny(gray, 150, 220)
 
 # 4) Apply the Hough Transform for line detection
 # rho = 1 pixel resolution
