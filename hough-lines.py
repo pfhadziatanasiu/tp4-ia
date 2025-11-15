@@ -18,7 +18,7 @@ edges = cv2.Canny(gray, 150, 220)
 # rho = 1 pixel resolution
 # theta = 1 degree resolution (π/180 radians)
 # threshold = minimum number of votes needed to consider something a line
-lines = cv2.HoughLines(edges, rho=1, theta=np.pi/180, threshold=230)
+lines = cv2.HoughLines(edges, rho=1, theta=np.pi/180, threshold=245)
 
 # 5) Draw the detected lines on a copy of the original image
 result = img.copy()
